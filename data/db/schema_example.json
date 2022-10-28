@@ -1,0 +1,7 @@
+[{
+	"video_id": 123,
+	"tags": ["cat", "dog", "elephant"]
+}, {
+	"video_id": 456,
+	"tags": ["dog", "bear", "cow"]
+}]
