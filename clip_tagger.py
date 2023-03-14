@@ -86,7 +86,7 @@ class CLIPTag(nn.Module):
         prompt_features = prompt_features / prompt_features.norm(dim=1, keepdim=True)
 
         # cosine similarity as logits
-        logit_scale = model.logit_scale.exp()
+        logit_scale = self.model.logit_scale.exp()
         logits_per_image = logit_scale * video_features @ prompt_features.t()
 
         logits_per_image = logits_per_image.view(-1, num_classes, num_prompts)
@@ -126,9 +126,9 @@ class CLIPTag(nn.Module):
         topk_kinetics_classes = self.tag_video_features_kinetics(clip_features, topk)
         return topk_imagenet_classes + topk_kinetics_classes
 
-model, preprocess = clip.load("ViT-B/32", device=device)
-clip_tagger = CLIPTag(model, preprocess)
+# model, preprocess = clip.load("ViT-B/32", device=device)
+# clip_tagger = CLIPTag(model, preprocess)
 
-video_path = 'data/v/quantumania.mp4'
-tags = clip_tagger.tag_video(video_path)
-print(tags)
+# video_path = 'data/v/quantumania.mp4'
+# tags = clip_tagger.tag_video(video_path)
+# print(tags)
