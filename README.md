@@ -1,6 +1,6 @@
 # Scalable-Video-Processing-Spark
 
-[Full paper](https://drive.google.com/drive/u/0/folders/1FpsA6CeokwQgDgJ9tfLkGaYy0nDyTien)
+[Full paper](https://drive.google.com/file/d/1WUL-E32PHevD-cuYugqAGtO2cfghB42M/view?usp=sharing)
 
 In this work, we tackle the problem of building a scalable video processing system, where the goal is to extract,
 store, and retrieve characteristic visual features from videos. We use a machine learning model, called [CLIP](https://github.com/openai/CLIP),
